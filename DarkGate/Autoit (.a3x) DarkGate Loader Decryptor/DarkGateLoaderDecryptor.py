@@ -72,7 +72,8 @@ def main():
     with open(output_path, 'wb') as file:
         file.write(decrypted_content)
 
-    print(f"Decryption completed successfully. Output written to: {output_path}")
+    print('[+] Decryption successful.')
+    print(f'[+] Output written to: {output_path}\n')
 
 if __name__ == "__main__":
     main()
