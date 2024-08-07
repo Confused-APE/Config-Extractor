@@ -34,12 +34,8 @@ def locate_payload(file_content, marker):
         raise ValueError("Start marker not found in the file.")
 
     start_position += marker_length
-    end_position = file_content.find(marker.encode('utf-8'), start_position)
 
-    if end_position == -1:
-        raise ValueError("End marker not found in the file.")
-
-    return file_content[start_position:end_position]
+    return file_content[start_position:]
 
 def main():
     parser = argparse.ArgumentParser(description='Decrypt DarkGate payload from Autoit .a3x loader enclosed by markers in a file.')
